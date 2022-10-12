@@ -1,9 +1,7 @@
-﻿using System.Diagnostics;
-using AlgernonCommons;
+﻿using AlgernonCommons;
 using AlgernonCommons.Patching;
 using ColossalFramework.IO;
 using ICities;
-using UnityEngine;
 
 namespace ADS.Source
 {

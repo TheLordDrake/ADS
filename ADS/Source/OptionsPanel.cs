@@ -8,7 +8,7 @@ namespace ADS.Source
 {
     public class OptionsPanel :  UIPanel
     {
-        private static readonly KeyCode[] _keyCodes = new KeyCode[]
+        private static readonly KeyCode[] KeyCodes = new KeyCode[]
         {
             KeyCode.LeftAlt,
             KeyCode.RightAlt,
@@ -33,9 +33,9 @@ namespace ADS.Source
             var hotkeyGroup = helper.AddGroup("HotKey");
             var hotKeyDropDown = (UIDropDown)hotkeyGroup.AddDropdown(
                 "HotKey",
-                _keyCodes.Select(x => x.ToString()).ToArray(),
-                Array.IndexOf(_keyCodes, ModSettings.HotKey) >= 0
-                    ? Array.IndexOf(_keyCodes, ModSettings.HotKey)
+                KeyCodes.Select(x => x.ToString()).ToArray(),
+                Array.IndexOf(KeyCodes, ModSettings.HotKey) >= 0
+                    ? Array.IndexOf(KeyCodes, ModSettings.HotKey)
                     : 0,
                 OnHotKeyChanged
             );
@@ -43,8 +43,8 @@ namespace ADS.Source
 
         private static void OnHotKeyChanged(int val)
         {
-            Logging.Message("Setting HotKey: " + _keyCodes[val]);
-            ModSettings.HotKey = _keyCodes[val];
+            Logging.Message("Setting HotKey: " + KeyCodes[val]);
+            ModSettings.HotKey = KeyCodes[val];
             Logging.Message("HotKey: " + ModSettings.HotKey);
         }
     }

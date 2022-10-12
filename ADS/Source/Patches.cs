@@ -23,7 +23,7 @@ namespace ADS.Source
         {
             lock (LockObject)
             {
-                _disableSnapping = Input.GetKey(HotKey); ;
+                _disableSnapping = Input.GetKey(HotKey);
             }
         }
 
@@ -76,6 +76,8 @@ namespace ADS.Source
 
                 yield return instruction;
             }
+
+            instructionEnumerator.Dispose();
         }
 
         private static ToolBase.RaycastOutput HandleSnapping(ToolBase.RaycastOutput output)
@@ -87,13 +89,13 @@ namespace ADS.Source
                     return output;
                 }
 
-                if (output.m_netNode != (ushort)0)
+                if (output.m_netNode != 0)
                 {
-                    output.m_hitPos = Singleton<NetManager>.instance.m_nodes.m_buffer[(int)output.m_netNode].m_position;
+                    output.m_hitPos = Singleton<NetManager>.instance.m_nodes.m_buffer[output.m_netNode].m_position;
                 }
-                else if (output.m_netSegment != (ushort)0)
+                else if (output.m_netSegment != 0)
                 {
-                    output.m_hitPos = Singleton<NetManager>.instance.m_segments.m_buffer[(int)output.m_netSegment]
+                    output.m_hitPos = Singleton<NetManager>.instance.m_segments.m_buffer[output.m_netSegment]
                         .GetClosestPosition(output.m_hitPos);
                 }
 
