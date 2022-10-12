@@ -2,7 +2,6 @@
 using System.Reflection;
 using System.Reflection.Emit;
 using AlgernonCommons;
-using AlgernonCommons.Patching;
 using ColossalFramework;
 using HarmonyLib;
 using UnityEngine;
@@ -17,12 +16,14 @@ namespace ADS.Source
         private static bool _patched;
         private static readonly object LockObject = new object();
 
+        public static KeyCode HotKey { get; set; }
+
         [HarmonyPatch(typeof(DistrictTool), "OnToolGUI")]
         public static void Postfix()
         {
             lock (LockObject)
             {
-                _disableSnapping = Input.GetKey(KeyCode.LeftAlt); ;
+                _disableSnapping = Input.GetKey(HotKey); ;
             }
         }
 
