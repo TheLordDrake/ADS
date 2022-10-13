@@ -20,4 +20,6 @@ namespace ADS.Source
 
         public override void SaveSettings() => ModSettings.Save();
     }
+
+    public sealed class Loading : PatcherLoadingBase<OptionsPanel, PatcherBase> {}
 }
