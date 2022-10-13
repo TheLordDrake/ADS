@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using AlgernonCommons;
 using ColossalFramework.UI;
 using UnityEngine;
 
@@ -43,9 +42,7 @@ namespace ADS.Source
 
         private static void OnHotKeyChanged(int val)
         {
-            Logging.Message("Setting HotKey: " + KeyCodes[val]);
             ModSettings.HotKey = KeyCodes[val];
-            Logging.Message("HotKey: " + ModSettings.HotKey);
         }
     }
 }

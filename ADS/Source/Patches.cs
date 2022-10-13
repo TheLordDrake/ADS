@@ -16,14 +16,12 @@ namespace ADS.Source
         private static bool _patched;
         private static readonly object LockObject = new object();
 
-        public static KeyCode HotKey { get; set; }
-
         [HarmonyPatch(typeof(DistrictTool), "OnToolGUI")]
         public static void Postfix()
         {
             lock (LockObject)
             {
-                _disableSnapping = Input.GetKey(HotKey);
+                _disableSnapping = Input.GetKey(ModSettings.HotKey);
             }
         }
 
