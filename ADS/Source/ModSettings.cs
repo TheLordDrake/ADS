@@ -17,16 +17,16 @@ namespace ADS.Source
             Path.Combine(DataLocation.localApplicationData, "ADS.xml");
 
         /// <summary>
-        /// HotKey to disable snapping
+        /// Hotkey to disable snapping
         /// </summary>
-        [XmlElement("HotKey")]
+        [XmlElement("Hotkey")]
         public KeyCode XmlHotKey
         {
-            get => HotKey;
-            set => HotKey = value;
+            get => Hotkey;
+            set => Hotkey = value;
         }
 
-        internal static KeyCode HotKey { get; set; } = KeyCode.LeftAlt;
+        internal static KeyCode Hotkey { get; set; } = KeyCode.LeftAlt;
 
         /// <summary>
         /// Loads setting from file

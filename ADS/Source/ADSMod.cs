@@ -1,5 +1,6 @@
 ﻿using AlgernonCommons;
 using AlgernonCommons.Patching;
+using AlgernonCommons.Translation;
 using ColossalFramework.IO;
 using ICities;
 
@@ -8,13 +9,11 @@ namespace ADS.Source
     public class ADSMod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
     {
         public override string BaseName => "Advanced District Snapping";
-        public string Description => "Allows disabling snapping to networks when painting districts.";
+        public string Description => Translations.Translate("MOD_DESCRIPTION");
         public override string HarmonyID => "com.thelorddrake.ads";
 
         public override void LoadSettings()
         {
-            Logging.Message(DataLocation.localApplicationData);
-            Logging.Message("KeyCode: " + ModSettings.HotKey);
             ModSettings.Load();
         }
 
