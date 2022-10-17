@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Schaltet alle 81 Spielbereiche frei.","Mod description displayed in content manager."
 "SET_LANGUAGE","Sprache auswählen",
 "HOTKEY","Hotkey",
+"LEFT_ALT","Linke Alt",
+"RIGHT_ALT","Rechts Alt",
+"LEFT_COMMAND","Gewinnen/Befehl",
+"LEFT_CTRL","Linke Strg",
+"RIGHT_CTRL","Rechts Strg",
+"LEFT_SHIFT","Linke Umschalttaste",
+"RIGHT_SHIFT","Rechte Umschalttaste",

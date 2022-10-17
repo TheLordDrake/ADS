@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Desbloqueia todos os 81 blocos do jogo.","Mod description displayed in content manager."
 "SET_LANGUAGE","Definir idioma"
 "HOTKEY","Tecla de atalho"
+"LEFT_ALT","Alt esquerdo",
+"RIGHT_ALT","Alt direito",
+"LEFT_COMMAND","Vencer/Comandar",
+"LEFT_CTRL","Ctrl esquerdo",
+"RIGHT_CTRL","Ctrl direito",
+"LEFT_SHIFT","Desvio à esquerda",
+"RIGHT_SHIFT","Deslocamento para a direita",

@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Desbloquea todas las 81 celdas de área de juego.","Mod description displayed in content manager."
 "SET_LANGUAGE","Elegir idioma",
 "HOTKEY","Tecla de acceso rápido",
+"LEFT_ALT","Alt izquierdo",
+"RIGHT_ALT","Alt derecho",
+"LEFT_COMMAND","Ganar/Comandar",
+"LEFT_CTRL","Ctrl izquierdo",
+"RIGHT_CTRL","Ctrl derecho",
+"LEFT_SHIFT","Shift izquierdo",
+"RIGHT_SHIFT","Shift derecho",

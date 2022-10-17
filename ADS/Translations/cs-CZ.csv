@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Odemkne všech 81 oblastí.","Mod description displayed in content manager."
 "SET_LANGUAGE","Nastavit jazyk",
 "HOTKEY","Klávesová zkratka",
+"LEFT_ALT","Levý Alt",
+"RIGHT_ALT","Pravý Alt",
+"LEFT_COMMAND","Windows/Příkaz",
+"LEFT_CTRL","Levý Ctrl",
+"RIGHT_CTRL","Pravý Ctrl",
+"LEFT_SHIFT","Levý Shift",
+"RIGHT_SHIFT","Pravý Shift",

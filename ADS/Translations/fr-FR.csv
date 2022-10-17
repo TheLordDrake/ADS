@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Déverrouille toutes les 81 tuiles de la zone de jeu.","Mod description displayed in content manager."
 "SET_LANGUAGE","Définir la langue"
 "HOTKEY","Touche de raccourci"
+"LEFT_ALT","Alt gauche",
+"RIGHT_ALT","Alt droite",
+"LEFT_COMMAND","Gagner/Commande",
+"LEFT_CTRL","Ctrl gauche",
+"RIGHT_CTRL","Ctrl droite",
+"LEFT_SHIFT","Décalage à gauche",
+"RIGHT_SHIFT","Décalage à droite",

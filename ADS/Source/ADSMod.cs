@@ -1,7 +1,5 @@
-﻿using AlgernonCommons;
-using AlgernonCommons.Patching;
+﻿using AlgernonCommons.Patching;
 using AlgernonCommons.Translation;
-using ColossalFramework.IO;
 using ICities;
 
 namespace ADS.Source

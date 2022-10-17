@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Allows disabling snapping to networks when painting districts.","Mod description displayed in content manager."
 "SET_LANGUAGE","Set language",
 "HOTKEY","Hotkey",
+"LEFT_ALT","Left Alt",
+"RIGHT_ALT","Right Alt",
+"LEFT_COMMAND","Win/Command",
+"LEFT_CTRL","Left Ctrl",
+"RIGHT_CTRL","Right Ctrl",
+"LEFT_SHIFT","Left Shift",
+"RIGHT_SHIFT","Right Shift",

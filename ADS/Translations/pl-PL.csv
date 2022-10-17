@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Odblokowuj wszystkie 81 kafelki mapy.","Mod description displayed in content manager."
 "SET_LANGUAGE","Ustaw język"
 "HOTKEY","Klawisz skrótu"
+"LEFT_ALT","Lewy Alt",
+"RIGHT_ALT","Prawy Alt",
+"LEFT_COMMAND","Wygraj/Polecenie",
+"LEFT_CTRL","Lewy Ctrl",
+"RIGHT_CTRL","Prawy Ctrl",
+"LEFT_SHIFT","Przesunięcie w lewo",
+"RIGHT_SHIFT","Przesunięcie w prawo",

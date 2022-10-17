@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","解锁所有81格游戏区域。","Mod description displayed in content manager."
 "SET_LANGUAGE","选择语言"
 "HOTKEY","热键"
+"LEFT_ALT","左 Alt",
+"RIGHT_ALT","右 Alt",
+"LEFT_COMMAND","赢/命令",
+"LEFT_CTRL","左 Ctrl",
+"RIGHT_CTRL","右 Ctrl",
+"LEFT_SHIFT","左移位",
+"RIGHT_SHIFT","右移",

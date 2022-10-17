@@ -13,3 +13,10 @@
 "MOD_DESCRIPTION","Открывает все 81 клетки в игре.","Mod description displayed in content manager."
 "SET_LANGUAGE","Выбрать язык"
 "HOTKEY","Горячая клавиша"
+"LEFT_ALT","Левый Alt",
+"RIGHT_ALT","Правый альт",
+"LEFT_COMMAND","Выигрыш/командование",
+"LEFT_CTRL","Левый Ctrl",
+"RIGHT_CTRL","Правый Ctrl",
+"LEFT_SHIFT","Сдвиг влево",
+"RIGHT_SHIFT","Сдвиг вправо",

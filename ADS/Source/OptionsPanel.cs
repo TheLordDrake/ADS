@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AlgernonCommons.Translation;
 using AlgernonCommons.UI;
@@ -9,13 +10,10 @@ namespace ADS.Source
 {
     public class OptionsPanel :  UIPanel
     {
-        // TODO: Create a string map to make the names Human Readable (Natural text)
-        private static readonly KeyCode[] KeyCodes = new KeyCode[]
-        {
+        private static readonly KeyCode[] KeyCodes = {
             KeyCode.LeftAlt,
             KeyCode.RightAlt,
             KeyCode.LeftCommand,
-            KeyCode.RightCommand, // TODO: Remove
             KeyCode.LeftControl,
             KeyCode.RightControl,
             KeyCode.LeftShift,
@@ -27,6 +25,17 @@ namespace ADS.Source
         /// </summary>
         public OptionsPanel()
         {
+            var localizedKeyCodes = new Dictionary<string, string>
+            {
+                { KeyCode.LeftAlt.ToString(), Translations.Translate("LEFT_ALT") },
+                { KeyCode.RightAlt.ToString(), Translations.Translate("RIGHT_ALT") },
+                { KeyCode.LeftCommand.ToString(), Translations.Translate("LEFT_COMMAND") },
+                { KeyCode.LeftControl.ToString(), Translations.Translate("LEFT_CTRL") },
+                { KeyCode.RightControl.ToString(), Translations.Translate("RIGHT_CTRL") },
+                { KeyCode.LeftShift.ToString(), Translations.Translate("LEFT_SHIFT") },
+                { KeyCode.RightShift.ToString(), Translations.Translate("RIGHT_SHIFT") }
+            };
+
             // Auto layout
             autoLayout = true;
             autoLayoutDirection = LayoutDirection.Vertical;
@@ -37,7 +46,7 @@ namespace ADS.Source
                 Translations.Translate("SET_LANGUAGE"),
                 Translations.LanguageList,
                 Translations.Index,
-                (value) =>
+                value =>
                 {
                     Translations.Index = value;
                     OptionsPanelManager<OptionsPanel>.LocaleChanged();
@@ -46,7 +55,7 @@ namespace ADS.Source
             var hotkeyGroup = helper.AddGroup(Translations.Translate("HOTKEY"));
             var hotKeyDropDown = (UIDropDown)hotkeyGroup.AddDropdown(
                 Translations.Translate("HOTKEY"),
-                KeyCodes.Select(x => x.ToString()).ToArray(),
+                KeyCodes.Select(x => localizedKeyCodes[x.ToString()]).ToArray(),
                 Array.IndexOf(KeyCodes, ModSettings.Hotkey) >= 0
                     ? Array.IndexOf(KeyCodes, ModSettings.Hotkey)
                     : 0,

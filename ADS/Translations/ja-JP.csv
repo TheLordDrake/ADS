@@ -14,3 +14,10 @@
 "MOD_DESCRIPTION","マップ内の全エリア 81タイルを全てアンロックします。","Mod description displayed in content manager."
 "SET_LANGUAGE","言語設定"
 "HOTKEY","ホットキー"
+"LEFT_ALT","左 Alt",
+"RIGHT_ALT","右 Alt",
+"LEFT_COMMAND","ウィン/コマンド",
+"LEFT_CTRL","左Ctrl",
+"RIGHT_CTRL","右 Ctrl",
+"LEFT_SHIFT","左シフト",
+"RIGHT_SHIFT","右シフト",
