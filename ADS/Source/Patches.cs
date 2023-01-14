@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using AlgernonCommons;
 using ColossalFramework;
+using ColossalFramework.UI;
 using HarmonyLib;
 using UnityEngine;
 
@@ -15,9 +16,11 @@ namespace ADS.Source
         private static bool _disableSnapping;
         private static bool _patched;
         private static readonly object LockObject = new object();
+        private static int _brushIndex = 2;
 
+        [HarmonyPostfix]
         [HarmonyPatch(typeof(DistrictTool), "OnToolGUI")]
-        public static void Postfix()
+        public static void LockPatch()
         {
             lock (LockObject)
             {
@@ -25,8 +28,51 @@ namespace ADS.Source
             }
         }
 
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(DistrictOptionPanel), "Awake")]
+        // ReSharper disable once InconsistentNaming
+        public static bool BrushPatch(DistrictOptionPanel __instance)
+        {
+            var districtTool = ToolsModifierControl.GetTool<DistrictTool>();
+            if (!(districtTool != null))
+                return false;
+            var strip = __instance.component as UITabstrip;
+            if (!(strip != null))
+                return false;
+
+            strip.tabs[0].eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
+            {
+                if (_brushIndex <= 0)
+                {
+                    return;
+                }
+
+                strip.selectedIndex = --_brushIndex;
+                SetBrushSize(__instance, districtTool, _brushIndex);
+                Logging.KeyMessage($"Brush index: {_brushIndex}");
+            };
+
+            strip.tabs[2].eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
+            {
+                if (_brushIndex >= 4)
+                {
+                    return;
+                }
+
+                strip.selectedIndex = ++_brushIndex;
+                SetBrushSize(__instance, districtTool, _brushIndex);
+                Logging.KeyMessage($"Brush index: {_brushIndex}");
+            };
+
+            // TODO: Change icons
+
+            // Return before original method runs
+            return false;
+        }
+
+        [HarmonyTranspiler]
         [HarmonyPatch(typeof(DistrictTool), nameof(DistrictTool.SimulationStep))]
-        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, MethodBase original) //, bool isKeyPressed, ToolBase.RaycastOutput output)
+        public static IEnumerable<CodeInstruction> SnapPatch(IEnumerable<CodeInstruction> instructions, MethodBase original) //, bool isKeyPressed, ToolBase.RaycastOutput output)
         {
             var flagCount = 0;
 
@@ -36,7 +82,7 @@ namespace ADS.Source
             {
                 var instruction = instructionEnumerator.Current;
 
-                // for for initial 'brfalse' to flag start of modifications
+                // look for initial 'brfalse' to flag start of modifications
                 if (!_patched && instruction != null && instruction.opcode == OpCodes.Brfalse)
                 {
                     flagCount++;
@@ -98,6 +144,31 @@ namespace ADS.Source
                 }
 
                 return output;
+            }
+        }
+
+        private static void SetBrushSize(DistrictOptionPanel panel, DistrictTool districtTool, int index)
+        {
+            const int xSmallBrushSize = 25;
+            const int xLargeBrushSize = 600;
+
+            switch (index)
+            {
+                case 0:
+                    districtTool.m_brushSize = xSmallBrushSize;
+                    break;
+                case 1:
+                    districtTool.m_brushSize = panel.m_SmallBrushSize;
+                    break;
+                case 2:
+                    districtTool.m_brushSize = panel.m_MediumBrushSize;
+                    break;
+                case 3:
+                    districtTool.m_brushSize = panel.m_LargeBrushSize;
+                    break;
+                case 4:
+                    districtTool.m_brushSize = xLargeBrushSize;
+                    break;
             }
         }
     }
