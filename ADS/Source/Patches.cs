@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using AlgernonCommons;
@@ -33,38 +34,64 @@ namespace ADS.Source
         // ReSharper disable once InconsistentNaming
         public static bool BrushPatch(DistrictOptionPanel __instance)
         {
-            var districtTool = ToolsModifierControl.GetTool<DistrictTool>();
-            if (!(districtTool != null))
-                return false;
-            var strip = __instance.component as UITabstrip;
-            if (!(strip != null))
-                return false;
-
-            strip.tabs[0].eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
+            try
             {
-                if (_brushIndex <= 0)
+                var districtTool = ToolsModifierControl.GetTool<DistrictTool>();
+                if (!(districtTool != null))
+                    return false;
+                var strip = __instance.component as UITabstrip;
+                if (!(strip != null))
+                    return false;
+
+                // TODO: Add tooltips
+
+                if (!(strip.tabs[0] is UIButton minusBtn))
                 {
-                    return;
+                    throw new NullReferenceException("Could not find Minus Button");
                 }
 
-                strip.selectedIndex = --_brushIndex;
-                SetBrushSize(__instance, districtTool, _brushIndex);
-                Logging.KeyMessage($"Brush index: {_brushIndex}");
-            };
-
-            strip.tabs[2].eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
-            {
-                if (_brushIndex >= 4)
+                minusBtn.atlas = AlgernonCommons.UI.UITextures.LoadSpriteAtlas("minus_atlas",
+                    new[]
+                    {
+                        "OptionBaseDisabled",
+                        "OptionBaseFocused",
+                        "OptionBasePressed",
+                        "OptionBaseHovered"
+                    });
+                Logging.KeyMessage($">))°> ---- {minusBtn.atlas}");
+                minusBtn.eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
                 {
-                    return;
+                    if (_brushIndex <= 0)
+                    {
+                        return;
+                    }
+
+                    strip.selectedIndex = --_brushIndex;
+                    SetBrushSize(__instance, districtTool, _brushIndex);
+                    Logging.KeyMessage($"Brush index: {_brushIndex}");
+                };
+
+                if (!(strip.tabs[2] is UIButton plusBtn))
+                {
+                    throw new NullReferenceException("Could not find Plus Button");
                 }
 
-                strip.selectedIndex = ++_brushIndex;
-                SetBrushSize(__instance, districtTool, _brushIndex);
-                Logging.KeyMessage($"Brush index: {_brushIndex}");
-            };
+                plusBtn.eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
+                {
+                    if (_brushIndex >= 4)
+                    {
+                        return;
+                    }
 
-            // TODO: Change icons
+                    strip.selectedIndex = ++_brushIndex;
+                    SetBrushSize(__instance, districtTool, _brushIndex);
+                    Logging.KeyMessage($"Brush index: {_brushIndex}");
+                };
+            }
+            catch (Exception ex)
+            {
+                Logging.LogException(ex);
+            }
 
             // Return before original method runs
             return false;
