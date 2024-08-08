@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace ADS.Source
 {
-    public class OptionsPanel :  UIPanel
+    public class OptionsPanel : OptionsPanelBase
     {
         private static readonly KeyCode[] KeyCodes = {
             KeyCode.LeftAlt,
@@ -23,7 +23,7 @@ namespace ADS.Source
         /// <summary>
         /// Initializes a new instance of the <see cref="OptionsPanel"/> class
         /// </summary>
-        public OptionsPanel()
+        protected override void Setup()
         {
             var localizedKeyCodes = new Dictionary<string, string>
             {
@@ -52,6 +52,13 @@ namespace ADS.Source
                     OptionsPanelManager<OptionsPanel>.LocaleChanged();
                 });
 
+            var snappingGroup = helper.AddGroup(Translations.Translate("SNAPPING"));
+            var snappingCheckbox = (UICheckBox)snappingGroup.AddCheckbox(
+                Translations.Translate("SNAPPING"),
+                ModSettings.DisableSnappingDefault,
+                OnSnappingChanged
+                );
+
             var hotkeyGroup = helper.AddGroup(Translations.Translate("HOTKEY"));
             var hotKeyDropDown = (UIDropDown)hotkeyGroup.AddDropdown(
                 Translations.Translate("HOTKEY"),
@@ -60,7 +67,12 @@ namespace ADS.Source
                     ? Array.IndexOf(KeyCodes, ModSettings.Hotkey)
                     : 0,
                 OnHotKeyChanged
-            );
+                );
+        }
+
+        private static void OnSnappingChanged(bool val)
+        {
+            ModSettings.DisableSnappingDefault = val;
         }
 
         private static void OnHotKeyChanged(int val)

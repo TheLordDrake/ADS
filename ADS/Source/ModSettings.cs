@@ -17,6 +17,18 @@ namespace ADS.Source
             Path.Combine(DataLocation.localApplicationData, "ADS.xml");
 
         /// <summary>
+        /// Default snapping behavior
+        /// </summary>
+        [XmlElement("DisableSnappingDefault")]
+        public bool XmlDisableSnappingDefault
+        {
+            get => DisableSnappingDefault;
+            set => DisableSnappingDefault = value;
+        }
+
+        internal static bool DisableSnappingDefault { get; set; } = false;
+
+        /// <summary>
         /// Hotkey to disable snapping
         /// </summary>
         [XmlElement("Hotkey")]
