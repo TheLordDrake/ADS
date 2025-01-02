@@ -12,6 +12,7 @@
 "HARMONY_MOD_CONFLICT","Inny modem może spróbować zastosować łatkę Harmony","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","Odblokowuj wszystkie 81 kafelki mapy.","Mod description displayed in content manager."
 "SET_LANGUAGE","Ustaw język"
+"SNAPPING","Wyłącz przyciąganie domyślnie",
 "HOTKEY","Klawisz skrótu"
 "LEFT_ALT","Lewy Alt",
 "RIGHT_ALT","Prawy Alt",

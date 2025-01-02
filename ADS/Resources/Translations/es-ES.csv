@@ -12,6 +12,7 @@
 "HARMONY_MOD_CONFLICT","Otro mod puede estar intentando aplicar un parche de Harmony conflictivo","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","Desbloquea todas las 81 celdas de área de juego.","Mod description displayed in content manager."
 "SET_LANGUAGE","Elegir idioma",
+"SNAPPING","Deshabilitar el ajuste de forma predeterminada",
 "HOTKEY","Tecla de acceso rápido",
 "LEFT_ALT","Alt izquierdo",
 "RIGHT_ALT","Alt derecho",

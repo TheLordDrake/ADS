@@ -12,6 +12,7 @@
 "HARMONY_MOD_CONFLICT","Eine andere Mod könnte versuchen, einen widersprüchlichen Harmony-Patch anzuwenden","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","Schaltet alle 81 Spielbereiche frei.","Mod description displayed in content manager."
 "SET_LANGUAGE","Sprache auswählen",
+"SNAPPING","Einrasten standardmäßig deaktivieren",
 "HOTKEY","Hotkey",
 "LEFT_ALT","Linke Alt",
 "RIGHT_ALT","Rechts Alt",
