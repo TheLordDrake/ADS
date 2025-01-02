@@ -25,7 +25,14 @@ namespace ADS.Source
         {
             lock (LockObject)
             {
-                _disableSnapping = Input.GetKey(ModSettings.Hotkey);
+                if (Input.GetKey(ModSettings.Hotkey))
+                {
+                    _disableSnapping = !ModSettings.DisableSnappingDefault;
+                }
+                else
+                {
+                    _disableSnapping = ModSettings.DisableSnappingDefault;
+                }
             }
         }
 
