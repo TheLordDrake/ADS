@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net35</TargetFramework>
-        <Version>0.2</Version>
+        <Version>0.3</Version>
         <ManagedDLLPath>$(MSBuildProgramFiles32)/Steam/steamapps/common/Cities_Skylines/Cities_Data/Managed</ManagedDLLPath>
         <AssemblySearchPaths>
             $(AssemblySearchPaths);
@@ -9,7 +9,7 @@
         </AssemblySearchPaths>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+        <PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
     </ItemGroup>
     <ItemGroup>
       <Reference Include="Assembly-CSharp">

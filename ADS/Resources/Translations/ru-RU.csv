@@ -12,6 +12,7 @@
 "HARMONY_MOD_CONFLICT","Другой мод может попытаться применить конфликтующие исправления Harmony","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","Открывает все 81 клетки в игре.","Mod description displayed in content manager."
 "SET_LANGUAGE","Выбрать язык"
+"SNAPPING","Отключить привязку по умолчанию",
 "HOTKEY","Горячая клавиша"
 "LEFT_ALT","Левый Alt",
 "RIGHT_ALT","Правый альт",

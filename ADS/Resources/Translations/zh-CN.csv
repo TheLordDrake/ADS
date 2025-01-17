@@ -11,7 +11,7 @@
 "HARMONY_MOD_ERROR","存在一个旧版/损坏模组导致Harmony 2无法正常运行","Possible cause of Harmony error - a broken mod (not this one) can cause things to stop working."
 "HARMONY_MOD_CONFLICT","另一个模组可能在尝试应用冲突的Harmony补丁","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","允许禁用设置区划时的网格吸附。","Mod description displayed in content manager."
-"SET_LANGUAGE","选择语言"
+"SET_LANGUAGE","选择语言",
 "SNAPPING","默认禁用吸附",
 "HOTKEY","热键"
 "LEFT_ALT","左Alt",

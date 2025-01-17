@@ -12,6 +12,7 @@
 "HARMONY_MOD_CONFLICT","Outro mod pode estar tentando aplicar um patch Harmony conflitante","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","Desbloqueia todos os 81 blocos do jogo.","Mod description displayed in content manager."
 "SET_LANGUAGE","Definir idioma"
+"SNAPPING","Desabilitar snap por padrão",
 "HOTKEY","Tecla de atalho"
 "LEFT_ALT","Alt esquerdo",
 "RIGHT_ALT","Alt direito",

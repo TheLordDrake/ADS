@@ -13,6 +13,7 @@
 ","Possible cause of Harmony error - two mods trying to patch the same thing at once."
 "MOD_DESCRIPTION","マップ内の全エリア 81タイルを全てアンロックします。","Mod description displayed in content manager."
 "SET_LANGUAGE","言語設定"
+"SNAPPING","デフォルトでスナップを無効にする",
 "HOTKEY","ホットキー"
 "LEFT_ALT","左 Alt",
 "RIGHT_ALT","右 Alt",
