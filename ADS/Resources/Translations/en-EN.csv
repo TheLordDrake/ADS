@@ -1,4 +1,6 @@
-﻿"LANGUAGE","English","Language name (in native language)."
+﻿"DEBUG", "Debug",
+"ENABLE_DEBUG_LOGGING", "Enable Debug Logging",
+"LANGUAGE","English","Language name (in native language)."
 "LANGUAGE_GAME","Use game language","Default selection in language selection menu."
 "NOTE_CLOSE","Close","Notification button text - closes the notification."
 "NOTE_DONTSHOWAGAIN","Don't show again","Notification button text - don't show this notification again."

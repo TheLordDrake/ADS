@@ -68,6 +68,13 @@ namespace ADS.Source
                     : 0,
                 OnHotKeyChanged
                 );
+            
+            var debugGroup = helper.AddGroup(Translations.Translate("DEBUG"));
+            var debugCheckbox = (UICheckBox)debugGroup.AddCheckbox(
+                Translations.Translate("ENABLE_DEBUG_LOGGING"),
+                ModSettings.EnableLogging,
+                OnEnableLoggingChanged
+            );
         }
 
         private static void OnSnappingChanged(bool val)
@@ -78,6 +85,11 @@ namespace ADS.Source
         private static void OnHotKeyChanged(int val)
         {
             ModSettings.Hotkey = KeyCodes[val];
+        }
+
+        private static void OnEnableLoggingChanged(bool bal)
+        {
+            ModSettings.EnableLogging = val;
         }
     }
 }

@@ -1,3 +1,5 @@
+"DEBUG", "Depuración",
+"ENABLE_DEBUG_LOGGING", "Habilitar el registro de depuración",
 "LANGUAGE","Español","Language name (in native language)."
 "LANGUAGE_GAME","Utilizar idioma del juego","Default selection in language selection menu."
 "NOTE_CLOSE","Cerrar","Notification button text - closes the notification."

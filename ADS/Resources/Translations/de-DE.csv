@@ -1,3 +1,5 @@
+"DEBUG", "Debug",
+"ENABLE_DEBUG_LOGGING", "Debug-Protokollierung aktivieren",
 "LANGUAGE","Deutsch","Language name (in native language)."
 "LANGUAGE_GAME","Spielsprache verwenden","Default selection in language selection menu."
 "NOTE_CLOSE","Schließen","Notification button text - closes the notification."

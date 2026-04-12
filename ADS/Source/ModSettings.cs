@@ -43,7 +43,7 @@ namespace ADS.Source
         /// <summary>
         /// Toggle debug logging
         /// </summary>
-        [XmlElement("Enable Logging")]
+        [XmlElement("EnableLogging")]
         public bool XmlEnableLogging {
             get => EnableLogging;
             set => EnableLogging = value;

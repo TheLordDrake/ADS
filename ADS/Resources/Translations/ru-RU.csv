@@ -1,3 +1,5 @@
+"DEBUG", "Отладка",
+"ENABLE_DEBUG_LOGGING", "Включить ведение журнала отладки",
 "LANGUAGE","Русский","Language name (in native language)."
 "LANGUAGE_GAME","Язык игры","Default selection in language selection menu."
 "NOTE_CLOSE","Закрыть","Notification button text - closes the notification."

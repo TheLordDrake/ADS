@@ -1,3 +1,5 @@
+"DEBUG", "Débogage",
+"ENABLE_DEBUG_LOGGING", "Activer la journalisation de débogage",
 "LANGUAGE","Français","Language name (in native language)."
 "LANGUAGE_GAME","Utiliser la langue du jeu","Default selection in language selection menu."
 "NOTE_CLOSE","Fermer","Notification button text - closes the notification."

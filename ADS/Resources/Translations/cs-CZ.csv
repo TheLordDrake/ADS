@@ -1,3 +1,5 @@
+"DEBUG", "Ladění",
+"ENABLE_DEBUG_LOGGING", "Zapnout protokolování ladění",
 "LANGUAGE","Čeština","Language name (in native language)."
 "LANGUAGE_GAME","Použít jazyk hry","Default selection in language selection menu."
 "NOTE_CLOSE","Zavřít","Notification button text - closes the notification."

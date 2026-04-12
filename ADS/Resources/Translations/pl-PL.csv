@@ -1,3 +1,5 @@
+"DEBUG", "Debugowanie",
+"ENABLE_DEBUG_LOGGING", "Włącz rejestrowanie danych debugowania",
 "LANGUAGE","Polski","Language name (in native language)."
 "LANGUAGE_GAME","Domyślny język","Default selection in language selection menu."
 "NOTE_CLOSE","Zamknij","Notification button text - closes the notification."

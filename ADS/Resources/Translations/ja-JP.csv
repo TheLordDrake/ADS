@@ -1,3 +1,5 @@
+"DEBUG", "デバッグ",
+"ENABLE_DEBUG_LOGGING", "デバッグログを有効にする",
 "LANGUAGE","日本語","Language name (in native language)."
 "LANGUAGE_GAME","ゲームの言語を使用","Default selection in language selection menu."
 "NOTE_CLOSE","閉じる","Notification button text - closes the notification."
