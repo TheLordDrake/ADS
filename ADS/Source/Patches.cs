@@ -65,7 +65,12 @@ namespace ADS.Source
                         "OptionBasePressed",
                         "OptionBaseHovered"
                     });
-                Logging.KeyMessage($">))°> ---- {minusBtn.atlas}");
+
+                if (ModSettings.EnableLogging)
+                {
+                    Logging.KeyMessage($">))°> ---- {minusBtn.atlas}");
+                }
+
                 minusBtn.eventClicked += (UIComponent component, UIMouseEventParameter eventParam) =>
                 {
                     if (_brushIndex <= 0)
@@ -75,7 +80,11 @@ namespace ADS.Source
 
                     strip.selectedIndex = --_brushIndex;
                     SetBrushSize(__instance, districtTool, _brushIndex);
-                    Logging.KeyMessage($"Brush index: {_brushIndex}");
+
+                    if (ModSettings.EnableLogging)
+                    {
+                        Logging.KeyMessage($"Brush index: {_brushIndex}");
+                    }
                 };
 
                 if (!(strip.tabs[2] is UIButton plusBtn))
@@ -92,7 +101,11 @@ namespace ADS.Source
 
                     strip.selectedIndex = ++_brushIndex;
                     SetBrushSize(__instance, districtTool, _brushIndex);
-                    Logging.KeyMessage($"Brush index: {_brushIndex}");
+
+                    if (ModSettings.EnableLogging)
+                    {
+                        Logging.KeyMessage($"Brush index: {_brushIndex}");
+                    }
                 };
             }
             catch (Exception ex)

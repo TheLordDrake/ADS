@@ -41,6 +41,17 @@ namespace ADS.Source
         internal static KeyCode Hotkey { get; set; } = KeyCode.LeftAlt;
 
         /// <summary>
+        /// Toggle debug logging
+        /// </summary>
+        [XmlElement("Enable Logging")]
+        public bool XmlEnableLogging {
+            get => EnableLogging;
+            set => EnableLogging = value;
+        }
+
+        internal static EnableLogging;
+
+        /// <summary>
         /// Loads setting from file
         /// </summary>
         internal static void Load() => XMLFileUtils.Load<ModSettings>(SettingsFileName);
