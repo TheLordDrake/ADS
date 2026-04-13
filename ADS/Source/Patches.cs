@@ -10,7 +10,6 @@ using UnityEngine;
 
 namespace ADS.Source
 {
-    [HarmonyDebug]
     [HarmonyPatch]
     public static class Patches
     {
